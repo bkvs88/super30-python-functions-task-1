@@ -109,16 +109,16 @@ print(upper_msg)  # BOB!
 | # | Question | Notebook File | Function Signature | Key Concept |
 |---|----------|----------------|-------------------|------------|
 | 1 | Create a function that returns the addition of two numbers. | `01_arithmetic_add.ipynb` | `def add(a, b)` | Basic arithmetic operation |
-| 2 | Create functions for subtraction, multiplication, and division. | `02_arithmetic_operations.ipynb` | `def subtract(a, b)`, `def multiply(a, b)`, `def divide(a, b)` | Multiple arithmetic operations with error handling |
+| 2 | Create functions for subtraction, multiplication, and division. | `02_arithmetic_operations.ipynb` | `def subtract(a, b)`, `def multiply(a, b)`, `def divide(a, b)` | Multiple arithmetic ope[...]
 | 3 | Create a function that determines whether a number is even or odd. | `03_even_odd_check.ipynb` | `def is_even(n)` | Conditional logic, modulo operator |
 | 4 | Create a function that returns the largest of three numbers without using max(). | `04_largest_of_three.ipynb` | `def largest_of_three(a, b, c)` | Conditional comparisons |
 | 5 | Create a function that calculates factorial. | `05_factorial.ipynb` | `def factorial(n)` | Iterative loops, input validation |
 | 6 | Create a function that checks whether a number is prime. | `06_prime_check.ipynb` | `def is_prime(n)` | Optimized loop logic |
-| 7 | Create `def calculate_discount(price, discount=10)` where the default discount is 10%. | `07_discount_calculator.ipynb` | `def calculate_discount(price, discount=10)` | Default parameters, keyword arguments |
+| 7 | Create `def calculate_discount(price, discount=10)` where the default discount is 10%. | `07_discount_calculator.ipynb` | `def calculate_discount(price, discount=10)` | Default parameters, [...]
 | 8 | Create a function that accepts a list and returns its sum without using sum(). | `08_list_sum.ipynb` | `def sum_list(numbers)` | List iteration, accumulation |
 | 9 | Create a function that accepts a string and returns the number of vowels. | `09_vowel_counter.ipynb` | `def count_vowels(s)` | String iteration, set membership |
 | 10 | Create a function that accepts a string and determines whether it is a palindrome. | `10_palindrome_check.ipynb` | `def is_palindrome(s)` | String manipulation, comparison |
-| 11 | Create a function that accepts name, age, course and returns a formatted student profile. Use both positional and keyword arguments while calling it. | `11_student_profile.ipynb` | `def student_profile(name, age, course)` | String formatting, positional & keyword arguments |
+| 11 | Create a function that accepts name, age, course and returns a formatted student profile. Use both positional and keyword arguments while calling it. | `11_student_profile.ipynb` | `def st[...]
 
 ---
 
@@ -129,18 +129,76 @@ Below are implementations for all requested functions with example usage.
 ```python
 # 1) add(a, b)
 def add(a, b):
-    """Return the sum of a and b."""
+    """
+    Return the sum of two numbers.
+    
+    Args:
+        a (int/float): First number
+        b (int/float): Second number
+    
+    Returns:
+        int/float: The sum of a and b
+    
+    Example:
+        >>> add(2, 3)
+        5
+    """
     return a + b
 
 # 2) basic arithmetic functions
 
 def subtract(a, b):
+    """
+    Return the difference of two numbers.
+    
+    Args:
+        a (int/float): First number (minuend)
+        b (int/float): Second number (subtrahend)
+    
+    Returns:
+        int/float: The difference (a - b)
+    
+    Example:
+        >>> subtract(5, 2)
+        3
+    """
     return a - b
 
 def multiply(a, b):
+    """
+    Return the product of two numbers.
+    
+    Args:
+        a (int/float): First number
+        b (int/float): Second number
+    
+    Returns:
+        int/float: The product of a and b
+    
+    Example:
+        >>> multiply(3, 4)
+        12
+    """
     return a * b
 
 def divide(a, b):
+    """
+    Return the quotient of two numbers.
+    
+    Args:
+        a (int/float): Dividend (numerator)
+        b (int/float): Divisor (denominator)
+    
+    Returns:
+        float: The quotient (a / b)
+    
+    Raises:
+        ValueError: If b (divisor) is zero
+    
+    Example:
+        >>> divide(10, 2)
+        5.0
+    """
     if b == 0:
         raise ValueError("Division by zero is not allowed")
     return a / b
@@ -148,11 +206,45 @@ def divide(a, b):
 # 3) check even or odd
 
 def is_even(n):
+    """
+    Check whether a number is even.
+    
+    A number is even if it is divisible by 2 (remainder is 0).
+    
+    Args:
+        n (int): The number to check
+    
+    Returns:
+        bool: True if n is even, False otherwise
+    
+    Example:
+        >>> is_even(4)
+        True
+        >>> is_even(5)
+        False
+    """
     return n % 2 == 0
 
 # 4) largest of three numbers (without using max())
 
 def largest_of_three(a, b, c):
+    """
+    Return the largest of three numbers without using the max() function.
+    
+    Uses conditional comparisons to determine the maximum value.
+    
+    Args:
+        a (int/float): First number
+        b (int/float): Second number
+        c (int/float): Third number
+    
+    Returns:
+        int/float: The largest of the three numbers
+    
+    Example:
+        >>> largest_of_three(5, 9, 2)
+        9
+    """
     largest = a
     if b > largest:
         largest = b
@@ -163,6 +255,28 @@ def largest_of_three(a, b, c):
 # 5) factorial (iterative)
 
 def factorial(n):
+    """
+    Calculate the factorial of a number.
+    
+    The factorial of n (denoted n!) is the product of all positive integers
+    from 1 to n. For example: 5! = 1 × 2 × 3 × 4 × 5 = 120.
+    By definition, 0! = 1.
+    
+    Args:
+        n (int): A non-negative integer
+    
+    Returns:
+        int: The factorial of n
+    
+    Raises:
+        ValueError: If n is negative (factorial undefined for negative numbers)
+    
+    Example:
+        >>> factorial(5)
+        120
+        >>> factorial(0)
+        1
+    """
     if n < 0:
         raise ValueError("Factorial is not defined for negative numbers")
     result = 1
@@ -173,6 +287,25 @@ def factorial(n):
 # 6) check prime
 
 def is_prime(n):
+    """
+    Check whether a number is prime.
+    
+    A prime number is a natural number greater than 1 that has no positive divisors
+    other than 1 and itself. Uses an optimized algorithm that checks divisibility
+    only up to the square root of n.
+    
+    Args:
+        n (int): The number to check
+    
+    Returns:
+        bool: True if n is prime, False otherwise
+    
+    Example:
+        >>> is_prime(13)
+        True
+        >>> is_prime(10)
+        False
+    """
     if n <= 1:
         return False
     if n <= 3:
@@ -189,7 +322,26 @@ def is_prime(n):
 # 7) calculate_discount(price, discount=10)
 
 def calculate_discount(price, discount=10):
-    """Return final price after applying discount percentage (discount default 10)."""
+    """
+    Calculate the final price after applying a discount percentage.
+    
+    Args:
+        price (int/float): The original price (must be non-negative)
+        discount (int/float): The discount percentage (default 10). 
+                             Must be between 0 and 100.
+    
+    Returns:
+        float: The final price after discount applied
+    
+    Raises:
+        ValueError: If price is negative or discount is not between 0 and 100
+    
+    Example:
+        >>> calculate_discount(100)
+        90.0
+        >>> calculate_discount(100, discount=25)
+        75.0
+    """
     if price < 0:
         raise ValueError("Price cannot be negative")
     if discount < 0 or discount > 100:
@@ -199,6 +351,21 @@ def calculate_discount(price, discount=10):
 # 8) sum_list without using sum()
 
 def sum_list(numbers):
+    """
+    Calculate the sum of all numbers in a list without using the built-in sum() function.
+    
+    Iterates through the list and accumulates the total using a for loop.
+    
+    Args:
+        numbers (list): A list of numbers (int or float)
+    
+    Returns:
+        int/float: The sum of all numbers in the list
+    
+    Example:
+        >>> sum_list([1, 2, 3, 4])
+        10
+    """
     total = 0
     for n in numbers:
         total += n
@@ -207,6 +374,22 @@ def sum_list(numbers):
 # 9) count vowels in a string
 
 def count_vowels(s):
+    """
+    Count the number of vowels in a string.
+    
+    Vowels are defined as 'a', 'e', 'i', 'o', 'u' (and their uppercase variants).
+    Uses a set for efficient membership checking.
+    
+    Args:
+        s (str): The input string
+    
+    Returns:
+        int: The count of vowels in the string
+    
+    Example:
+        >>> count_vowels('Hello World')
+        3
+    """
     vowels = set('aeiouAEIOU')
     count = 0
     for ch in s:
@@ -217,12 +400,51 @@ def count_vowels(s):
 # 10) check palindrome
 
 def is_palindrome(s):
+    """
+    Check whether a string is a palindrome.
+    
+    A palindrome reads the same forwards and backwards. This function ignores
+    spaces, punctuation, and capitalization. For example, "A man, a plan, a canal: Panama"
+    is a palindrome.
+    
+    Args:
+        s (str): The input string
+    
+    Returns:
+        bool: True if s is a palindrome, False otherwise
+    
+    Example:
+        >>> is_palindrome('A man, a plan, a canal: Panama')
+        True
+        >>> is_palindrome('hello')
+        False
+    """
     cleaned = ''.join(ch.lower() for ch in s if ch.isalnum())
     return cleaned == cleaned[::-1]
 
 # 11) student profile
 
 def student_profile(name, age, course):
+    """
+    Return a formatted student profile string.
+    
+    Accepts student information and returns a formatted multi-line profile
+    with name, age, and course on separate lines.
+    
+    Args:
+        name (str): The student's name
+        age (int): The student's age
+        course (str): The course the student is enrolled in
+    
+    Returns:
+        str: A formatted profile string with lines separated by newlines
+    
+    Example:
+        >>> print(student_profile('Alice', 22, 'Physics'))
+        Name: Alice
+        Age: 22
+        Course: Physics
+    """
     return f"Name: {name}\nAge: {age}\nCourse: {course}"
 
 # Usage examples (positional and keyword arguments):
