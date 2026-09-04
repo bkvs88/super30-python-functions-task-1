@@ -52,6 +52,7 @@ print(message)  # Output: Hello, Alice!
 **Example showing positional and keyword arguments:**
 ```python
 def concat(a, b, sep=' '):
+    """Concatenate two strings with a separator."""
     return f"{a}{sep}{b}"
 
 # Positional call
@@ -74,9 +75,11 @@ print(concat('hello', 'world', sep='_'))  # 'hello_world'
 
 ```python
 def greet_print(name):
+    """Greet using print (output only, no return value)."""
     print(f"Hello, {name}!")
 
 def greet_return(name):
+    """Greet using return (value can be reused by caller)."""
     return f"Hello, {name}!"
 
 # Using print(): the function prints but we cannot reuse the value
@@ -109,7 +112,7 @@ print(upper_msg)  # BOB!
 | # | Question | Notebook File | Function Signature | Key Concept |
 |---|----------|----------------|-------------------|------------|
 | 1 | Create a function that returns the addition of two numbers. | `add_fun.ipynb` | `def add(a, b)` | Basic arithmetic operation |
-| 2 | Create functions for subtraction, multiplication, and division. | `sub_fun.ipynb`, `multiplication_fun.ipynb`, `division_fun.ipynb` | `def subtract(a, b)`, `def multiply(a, b)`, `def divide(a, b)` | Multiple arithmetic operations |
+| 2 | Create functions for subtraction, multiplication, and division. | `sub_fun.ipynb`, `multiplication_fun.ipynb`, `division_fun.ipynb` | `def subtract(a, b)`, `def multiply(a, b)`, `def divide(a, b)` | Basic arithmetic operations |
 | 3 | Create a function that determines whether a number is even or odd. | `number_odd_even_check.ipynb` | `def is_even(n)` | Conditional logic, modulo operator |
 | 4 | Create a function that returns the largest of three numbers without using max(). | `fun_max_number.ipynb` | `def largest_of_three(a, b, c)` | Conditional comparisons |
 | 5 | Create a function that calculates factorial. | `fact_fun.ipynb` | `def factorial(n)` | Iterative loops, input validation |
@@ -118,7 +121,7 @@ print(upper_msg)  # BOB!
 | 8 | Create a function that accepts a list and returns its sum without using sum(). | `accept_list_sum_fun.ipynb` | `def sum_list(numbers)` | List iteration, accumulation |
 | 9 | Create a function that accepts a string and returns the number of vowels. | `vowels_check_fun.ipynb` | `def count_vowels(s)` | String iteration, set membership |
 | 10 | Create a function that accepts a string and determines whether it is a palindrome. | `palindrome_check_fun.ipynb` | `def is_palindrome(s)` | String manipulation, comparison |
-| 11 | Create a function that accepts name, age, course and returns a formatted student profile. Use both positional and keyword arguments while calling it. | `accept_and_display_fun.ipynb` | `def student_profile(name, age, course)` | Multiple parameters, formatted output |
+| 11 | Create a function that accepts name, age, course and returns a formatted student profile. Use both positional and keyword arguments while calling it. | `accept_and_display_fun.ipynb` | `def student_profile(name, age, course)` | Positional and keyword arguments |
 
 ---
 
