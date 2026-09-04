@@ -108,17 +108,17 @@ print(upper_msg)  # BOB!
 
 | # | Question | Notebook File | Function Signature | Key Concept |
 |---|----------|----------------|-------------------|------------|
-| 1 | Create a function that returns the addition of two numbers. | `01_arithmetic_add.ipynb` | `def add(a, b)` | Basic arithmetic operation |
-| 2 | Create functions for subtraction, multiplication, and division. | `02_arithmetic_operations.ipynb` | `def subtract(a, b)`, `def multiply(a, b)`, `def divide(a, b)` | Multiple arithmetic ope[...]
-| 3 | Create a function that determines whether a number is even or odd. | `03_even_odd_check.ipynb` | `def is_even(n)` | Conditional logic, modulo operator |
-| 4 | Create a function that returns the largest of three numbers without using max(). | `04_largest_of_three.ipynb` | `def largest_of_three(a, b, c)` | Conditional comparisons |
-| 5 | Create a function that calculates factorial. | `05_factorial.ipynb` | `def factorial(n)` | Iterative loops, input validation |
-| 6 | Create a function that checks whether a number is prime. | `06_prime_check.ipynb` | `def is_prime(n)` | Optimized loop logic |
-| 7 | Create `def calculate_discount(price, discount=10)` where the default discount is 10%. | `07_discount_calculator.ipynb` | `def calculate_discount(price, discount=10)` | Default parameters, [...]
-| 8 | Create a function that accepts a list and returns its sum without using sum(). | `08_list_sum.ipynb` | `def sum_list(numbers)` | List iteration, accumulation |
-| 9 | Create a function that accepts a string and returns the number of vowels. | `09_vowel_counter.ipynb` | `def count_vowels(s)` | String iteration, set membership |
-| 10 | Create a function that accepts a string and determines whether it is a palindrome. | `10_palindrome_check.ipynb` | `def is_palindrome(s)` | String manipulation, comparison |
-| 11 | Create a function that accepts name, age, course and returns a formatted student profile. Use both positional and keyword arguments while calling it. | `11_student_profile.ipynb` | `def st[...]
+| 1 | Create a function that returns the addition of two numbers. | `add_fun.ipynb` | `def add(a, b)` | Basic arithmetic operation |
+| 2 | Create functions for subtraction, multiplication, and division. | `sub_fun.ipynb`, `multiplication_fun.ipynb`, `division_fun.ipynb` | `def subtract(a, b)`, `def multiply(a, b)`, `def divide(a, b)` | Multiple arithmetic operations |
+| 3 | Create a function that determines whether a number is even or odd. | `number_odd_even_check.ipynb` | `def is_even(n)` | Conditional logic, modulo operator |
+| 4 | Create a function that returns the largest of three numbers without using max(). | `fun_max_number.ipynb` | `def largest_of_three(a, b, c)` | Conditional comparisons |
+| 5 | Create a function that calculates factorial. | `fact_fun.ipynb` | `def factorial(n)` | Iterative loops, input validation |
+| 6 | Create a function that checks whether a number is prime. | `prime_check_fun.ipynb` | `def is_prime(n)` | Optimized loop logic |
+| 7 | Create `def calculate_discount(price, discount=10)` where the default discount is 10%. | `default_var_fun.ipynb` | `def calculate_discount(price, discount=10)` | Default parameters, percentage calculations |
+| 8 | Create a function that accepts a list and returns its sum without using sum(). | `accept_list_sum_fun.ipynb` | `def sum_list(numbers)` | List iteration, accumulation |
+| 9 | Create a function that accepts a string and returns the number of vowels. | `vowels_check_fun.ipynb` | `def count_vowels(s)` | String iteration, set membership |
+| 10 | Create a function that accepts a string and determines whether it is a palindrome. | `palindrome_check_fun.ipynb` | `def is_palindrome(s)` | String manipulation, comparison |
+| 11 | Create a function that accepts name, age, course and returns a formatted student profile. Use both positional and keyword arguments while calling it. | `accept_and_display_fun.ipynb` | `def student_profile(name, age, course)` | Multiple parameters, formatted output |
 
 ---
 
@@ -483,5 +483,9 @@ if __name__ == '__main__':
 - Keep functions focused on a single task for better reusability and testing.
 
 ---
+
+## Repository Structure
+
+Each exercise has a dedicated Jupyter Notebook file for interactive learning and experimentation. Refer to Section 2's "Questions & Implementations Map" table for the correct notebook file names.
 
 If you want, I can also create individual `functions.py` files for each notebook or a combined `functions.py` file with all implementations. Let me know!
