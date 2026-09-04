@@ -53,7 +53,23 @@ print(concat('hello', 'world'))  # 'hello world'
 print(concat('hello', 'world', sep='-'))  # 'hello-world'
 ```
 
-## 3. Task: Implementations
+## 3. Questions & Implementations Map
+
+| # | Question | Function Signature | Key Concept |
+|---|----------|-------------------|------------|
+| 1 | Create a function that returns the addition of two numbers. | `def add(a, b)` | Basic arithmetic operation |
+| 2 | Create functions for subtraction, multiplication, and division. | `def subtract(a, b)`, `def multiply(a, b)`, `def divide(a, b)` | Multiple arithmetic operations with error handling |
+| 3 | Create a function that determines whether a number is even or odd. | `def is_even(n)` | Conditional logic, modulo operator |
+| 4 | Create a function that returns the largest of three numbers without using max(). | `def largest_of_three(a, b, c)` | Conditional comparisons |
+| 5 | Create a function that calculates factorial. | `def factorial(n)` | Iterative loops, input validation |
+| 6 | Create a function that checks whether a number is prime. | `def is_prime(n)` | Optimized loop logic |
+| 7 | Create `def calculate_discount(price, discount=10)` where the default discount is 10%. | `def calculate_discount(price, discount=10)` | Default parameters, keyword arguments |
+| 8 | Create a function that accepts a list and returns its sum without using sum(). | `def sum_list(numbers)` | List iteration, accumulation |
+| 9 | Create a function that accepts a string and returns the number of vowels. | `def count_vowels(s)` | String iteration, set membership |
+| 10 | Create a function that accepts a string and determines whether it is a palindrome. | `def is_palindrome(s)` | String manipulation, comparison |
+| 11 | Create a function that accepts name, age, course and returns a formatted student profile. Use both positional and keyword arguments while calling it. | `def student_profile(name, age, course)` | String formatting, positional & keyword arguments |
+
+## 4. Task: Implementations
 
 Below are implementations for the requested functions with example usage.
 
